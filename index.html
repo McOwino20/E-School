@@ -399,49 +399,6 @@ main {
         fetchDocuments(); 
     </script>
     
-    <!--
-function doGet(e) {
-    let folderId = "121fxE6GLVwfaz1-JIzrB083yd_9DFlSr"; 
-    let folder = DriveApp.getFolderById(folderId);
-    let files = folder.getFiles();
-    let documents = [];
-
-    if (e.parameter.search) {
-        let query = e.parameter.search.toLowerCase();
-        while (files.hasNext()) {
-            let file = files.next();
-            if (file.getName().toLowerCase().includes(query)) {
-                documents.push({
-                    name: file.getName(),
-                    type: file.getMimeType(),
-                    url: file.getUrl()
-                });
-            }
-        }
-    } else {
-        let start = parseInt(e.parameter.start || 0);
-        let count = 0;
-        while (files.hasNext() && count < start + 5) {
-            let file = files.next();
-            if (count >= start) {
-                documents.push({
-                    name: file.getName(),
-                    type: file.getMimeType(),
-                    url: file.getUrl()
-                });
-            }
-            count++;
-        }
-    }
-
-    return ContentService.createTextOutput(JSON.stringify(documents)).setMimeType(ContentService.MimeType.JSON);
-}
-
-    -->
-    
-    
-    
-
 
     <!-- Formbutton docs at formspree.io/formbutton/ -->
 <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
