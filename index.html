@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="INSERT PAGE URL">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Unlock Premium Study Materials & Legal Resources | TechIQ Web Solutions | Developed by McOwino">
+    <meta property="og:description" content="Get instant access to exclusive study materials, legal documents, and expert resources. Perfect for ambitious students, educators, and professionals.">
+    <meta property="og:image" content="https://mcowino20.github.io/EduTech_Insights/academics/e-documents/e-document_img/e-documents.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="mcowino20.github.io">
+    <meta property="twitter:url" content="https://mcowino20.github.io/developer254.mc/Resources/websources.html#gsc.tab=0">
+    <meta name="twitter:title" content="Unlock Premium Study Materials & Legal Resources | TechIQ Web Solutions | Developed by McOwino">
+    <meta name="twitter:description" content="Get instant access to exclusive study materials, legal documents, and expert resources. Perfect for ambitious students, educators, and professionals.">
+    <meta name="twitter:image" content="https://mcowino20.github.io/EduTech_Insights/academics/e-documents/e-document_img/e-documents.jpg">
+
+    
+    <!-- start of fa fa-icon lib -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- end of fa fa-icon lib -->
+    <title>E-Learning File Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background: #f4f4f4;
+        }
+        h2 { color: #333; }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover { background: #0056b3; }
+        #document-list {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .doc-item {
+            background: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: left;
+        }
+        .doc-item a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .hidden { display: none; }
+        .loading {
+            font-size: 14px;
+            color: #007BFF;
+            display: block;
+            margin-top: 10px;
+        }
+        #status-message {
+            margin-top: 10px;
+            font-size: 14px;
+            padding: 8px;
+            border-radius: 5px;
+            display: none;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+        
+             footer {
+      position: fixed;
+      left:0;
+      bottom:0;
+      width: 100%;
+      text-align: center;
+      color: white;
+      background: #111;
+      
+      color: #fff;
+}
+
+footer span a {
+  color: skyblue;
+  text-decoration: none;
+}
+
+footer span a:hover {
+  text-decoration: underline;
+}
+    
+a,
+a:visited {
+
+  text-decoration: none;
+  color: crimpson;
+}
+p{
+  color: black;
+}
+
+    .social-icons {
+      margin-top: 10px;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #27ae60;
+    }
+    
+
+
+
+main {
+  margin-top: 80px;
+}
+
+
+
+
+
+
+.logo-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #00d4ff;
+  letter-spacing: 0.1px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 2px 6px rgba(0, 212, 255, 0.5);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  background: linear-gradient(90deg, #00d4ff, #00ffc8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-text:hover {
+  text-shadow: 0 0 8px #00ffc8, 0 0 12px #00d4ff;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.navbar {
+  background: linear-gradient(to right, #141E30, #243B55);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  position: fixed; /* Make it fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above all other elements */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+/* Style the navigation menu */
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+main {
+  margin-top: 80px;
+}
+
+
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  text-align: left;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00d4ff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1a2739;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    padding: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li a i {
+  margin-right: 8px;
+}
+
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+    </style>
+    
+</head>
+
+
+
+    
+    
+<body>
+  
+  
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/maxresdefault.jpg" alt="Logo" class="logo-img" />
+      <span class="logo-text">TechIQ  Docs Manager</span>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+<ul class="nav-links" id="nav-links">
+  <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+  <li><a href="#"><i class="fas fa-user"></i> About</a></li>
+  <li><a href="#"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+  <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+  <li><a href="#"><i class="fas fa-fas fa-hand-holding-heart"></i>Support Us</a></li>
+    
+  <li><a href="https://script.google.com/macros/s/AKfycbw90WbIqr4DlHt2sewiPUOf98YfIp72smzG-zM2nu4mAZNGCyYO1pZytWydWkcqDe5nYA/exec"><i class="fas fa-fas fa-book"></i>School Docs</a></li>
+  <li><a href="#"><i class="fas fa-fas fa-shield-alt"></i>Legal Docs</a></li>
+    
+  <li><a href="#"><i class="fas fa-fas fa-paperclip"></i>Upload Docs</a></li>
+    <li><a href="#"><i class="fas fa-fas fa-pen-nib"></i>Writing</a></li>
+   <li><a href="#"><i class="fas fa-fas fa-user-cog"></i>Our Services</a></li>
+   <li><a href="#"><i class="fas fa-fas fa-briefcase "></i>Careers</a></li>
+   <li><a href="#"><i class="fas fa-fas fa-users"></i>WhatsApp Group</a></li>
+</ul>
+
+  </nav>
+  
+
+
+<main>
+
+    <h2>Google Drive File Manager</h2>
+    
+    <input type="text" id="search-query" placeholder="Search documents...">
+    <button onclick="searchDocuments()">Search</button>
+    <span id="loading-search" class="loading hidden">Searching...</span>
+
+    <div id="document-list"></div>
+
+    <button id="load-more-btn" onclick="fetchDocuments()" class="hidden">Load More</button>
+
+    <h3>Upload a Document</h3>
+    <input type="file" id="file-input">
+    <button onclick="uploadFile()">Upload</button>
+    <span id="loading-upload" class="loading hidden">Uploading...</span>
+    <div id="status-message"></div>
+    
+    
+    <br>
+  <br>
+  <br>
+  <br>
+  </main>
+  
+    <script>
+        let start = 0;
+        let isSearching = false; 
+        const API_URL = "https://script.google.com/macros/s/AKfycbxsc-YsjY2igGlKgvBr9uMlNRDOaZJJxftqiA6nogO0HXoh5dZV0l-nrpv3FEhCwibfnQ/exec"; // Replace with your deployed Apps Script URL
+
+        function fetchDocuments(reset = false) {
+            if (isSearching) return; // Prevent fetch during search
+
+            let documentList = document.getElementById('document-list');
+            let loadMoreBtn = document.getElementById('load-more-btn');
+
+            if (reset) {
+                start = 0;
+                documentList.innerHTML = "";
+            }
+
+            fetch(`${API_URL}?start=${start}`)
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(doc => {
+                        documentList.innerHTML += `
+                            <div class="doc-item">
+                                <strong>${doc.name}</strong> (${doc.type}) <br>
+                                <a href="${doc.url}" target="_blank">View</a>
+                            </div>
+                        `;
+                    });
+                    start += 5;
+                    loadMoreBtn.classList.toggle('hidden', data.length < 5);
+                })
+                .catch(() => alert("Error loading documents."));
+        }
+
+        function searchDocuments() {
+            let query = document.getElementById('search-query').value.trim();
+            let loadingSearch = document.getElementById('loading-search');
+            let documentList = document.getElementById('document-list');
+            let loadMoreBtn = document.getElementById('load-more-btn');
+
+            if (!query) {
+                alert("Please enter a search term.");
+                return;
+            }
+
+            isSearching = true; 
+            loadingSearch.classList.remove('hidden');
+            documentList.innerHTML = ""; 
+            loadMoreBtn.classList.add('hidden');
+
+            fetch(`${API_URL}?search=${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length === 0) {
+                        documentList.innerHTML = "<p>No documents found .</p>";
+                    } else {
+                        data.forEach(doc => {
+                            documentList.innerHTML += `
+                                <div class="doc-item">
+                                    <strong>${doc.name}</strong> (${doc.type}) <br>
+                                    <a href="${doc.url}" target="_blank">View</a>
+                                </div>
+                            `;
+                        });
+                    }
+                })
+                .catch(() => alert("Error searching documents."))
+                .finally(() => {
+                    loadingSearch.classList.add('hidden');
+                    isSearching = false; 
+                });
+        }
+
+        fetchDocuments(); 
+    </script>
+    
+    <!--
+function doGet(e) {
+    let folderId = "121fxE6GLVwfaz1-JIzrB083yd_9DFlSr"; 
+    let folder = DriveApp.getFolderById(folderId);
+    let files = folder.getFiles();
+    let documents = [];
+
+    if (e.parameter.search) {
+        let query = e.parameter.search.toLowerCase();
+        while (files.hasNext()) {
+            let file = files.next();
+            if (file.getName().toLowerCase().includes(query)) {
+                documents.push({
+                    name: file.getName(),
+                    type: file.getMimeType(),
+                    url: file.getUrl()
+                });
+            }
+        }
+    } else {
+        let start = parseInt(e.parameter.start || 0);
+        let count = 0;
+        while (files.hasNext() && count < start + 5) {
+            let file = files.next();
+            if (count >= start) {
+                documents.push({
+                    name: file.getName(),
+                    type: file.getMimeType(),
+                    url: file.getUrl()
+                });
+            }
+            count++;
+        }
+    }
+
+    return ContentService.createTextOutput(JSON.stringify(documents)).setMimeType(ContentService.MimeType.JSON);
+}
+
+    -->
+    
+    
+    
+
+
+    <!-- Formbutton docs at formspree.io/formbutton/ -->
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton = window.formbutton || function() {
+    (formbutton.q = formbutton.q || []).push(arguments) };
+  /* customize formbutton below*/
+  formbutton("create", {
+    action: "https://formspree.io/f/mleqdkyn",
+    title: "<p>Hi there. Let's talk !</p>",
+    fields: [
+      {
+        type: "email",
+        label: "Email:",
+        name: "email",
+        required: true,
+        placeholder: "Eg. mcowino20@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "Eg. Hi Mc, I would like to...",
+      },
+      { type: "submit" }
+    ],
+    styles: {
+      title: {
+        backgroundColor: "skyblue"
+      },
+      button: {
+        backgroundColor: "skyblue"
+      }
+    }
+  });
+        </script>
+    <!-- end of form button -->
+    
+    
+    
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navLinks.classList.toggle('active');
+    });
+
+    document.body.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+
+    navLinks.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  </script>
+ <footer>
+     <br>
+<span>Copyright © <script> document.write(new Date().getFullYear());
+      </script> All rights reserved By <i class="fa fa-heart"></i> <a href="#">McOwino</a></p>
+      
+      
+       <div class="social-icons">
+      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    
+      <br>
+    Developed by:<i class="fa fa-user-shield"></i> <a href="#">McOwino</a>
+  </footer>
+    
+</body>
+</html>
