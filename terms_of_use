@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use | E-Documents Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+      <!-- start of fa fa-icon lib -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- end of fa fa-icon lib -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.7;
+    }
+    header {
+      /*background: linear-gradient(90deg, #1e3a8a, #3b82f6);*/
+      color: white;
+      padding: 0.5rem 0.25rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      background: #111
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      text-align: justify;
+    }
+    h2 {
+      color: #1e3a8a;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background:#111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      
+      color: #fff;
+    }
+
+/*
+
+      footer {
+      position: fixed;
+      left:0;
+      bottom:0;
+      width: 100%;
+      text-align: center;
+      color: white;
+      background: #111;
+      
+      color: #fff;
+}
+
+
+
+
+footer span a:hover {
+  text-decoration: underline;
+}
+    
+a,
+a:visited {
+
+  text-decoration: none;
+  color: crimpson;
+}
+p{
+  color: black;
+}
+*/
+
+
+footer span a {
+  color: skyblue;
+  text-decoration: none;
+}
+    .social-icons {
+      margin-top: 10px;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #27ae60;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media (max-width: 768px) {
+      main {
+        margin: 1rem;
+        padding: 1rem;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Terms of Use</h1>
+    <p>Last updated: 26/05/2025</p>
+  </header>
+
+  <main>
+    <h2>1. Service Description</h2>
+    <p>E-Documents Studio is a free, web-based platform providing digital access to educational, academic, and legal documents. The platform is designed to support students, educators, legal practitioners, and lifelong learners by offering a curated selection of resources aimed at research, instruction, and academic excellence.</p>
+
+    <h2>2. Eligibility</h2>
+    <p>Access to E-Documents Studio is open to anyone aged 13 and above. By using our platform, you represent that you meet this age requirement and that your use complies with all applicable laws and regulations in your jurisdiction.</p>
+
+    <h2>3. Acceptable Use Policy</h2>
+    <p>Users must adhere to ethical standards and comply with all applicable intellectual property laws when using the platform. You agree to:</p>
+    <ul>
+      <li>Use content solely for personal, academic, and non-commercial educational purposes.</li>
+      <li>Credit original authors and content creators where applicable.</li>
+      <li>Ensure that any content shared or uploaded by you does not contain malware, hateful speech, or copyright-infringing materials.</li>
+    </ul>
+
+    <h2>4. Prohibited Activities</h2>
+    <p>The following actions are strictly prohibited:</p>
+    <ul>
+      <li>Republishing or redistributing materials for commercial gain.</li>
+      <li>Copying, modifying, or reverse-engineering any aspect of the platform’s code or design.</li>
+      <li>Using automated tools (e.g., bots, crawlers) to harvest or scrape data.</li>
+      <li>Uploading or distributing malicious software or harmful files.</li>
+      <li>Engaging in harassment or violating the rights of others through the platform.</li>
+    </ul>
+
+    <h2>5. Intellectual Property Rights</h2>
+    <p>All proprietary features, including design assets, branding, logos, and platform structure, are owned by E-Documents Studio. Users must not claim ownership of any content found on the platform unless explicitly granted by the rightful owner. Any third-party material remains the property of its original copyright holder.</p>
+
+    <h2>6. Privacy and Data Collection</h2>
+    <p>E-Documents Studio is committed to protecting your privacy. We collect limited user data, such as analytics for service improvement and basic account information (where applicable). All collected data is stored securely and never sold or shared with third parties without user consent.</p>
+
+    <h2>7. Disclaimers and Content Validity</h2>
+    <p>Content provided through E-Documents Studio is for informational purposes only. We do not guarantee the correctness, completeness, or legal applicability of any material. Users should conduct their own verification before relying on documents for academic or legal use.</p>
+
+    <h2>8. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, E-Documents Studio and its operators shall not be held liable for any direct, indirect, or consequential damages arising from platform use, including errors in content, interruptions in service, or reliance on materials provided.</p>
+
+    <h2>9. Amendments and Revisions</h2>
+    <p>We reserve the right to revise these Terms of Use at any time. Users will be notified of significant updates through the platform. Continued usage after changes have been posted constitutes agreement to the updated terms.</p>
+
+    <h2>10. Termination of Access</h2>
+    <p>We may suspend or terminate a user’s access at our discretion if they violate these terms, engage in unlawful activities, or threaten the security and integrity of the platform.</p>
+
+    <h2>11. Governing Law</h2>
+    <p>These Terms shall be governed and interpreted under the laws of [Insert Jurisdiction]. Any disputes arising from platform use shall be resolved in accordance with the legal procedures of the said jurisdiction.</p>
+
+    <h2>12. Contact Information</h2>
+    <p>If you have questions, require clarification, or need assistance, please contact us via email at: contact@edocstudio.com</p>
+  </main>
+
+  <footer>
+    
+    
+
+   <p> <span>Copyright © <script> document.write(new Date().getFullYear());
+      </script> E-Documents Studio | All rights reserved By <i class="fa fa-heart"></i> <a href="#">McOwino</a></p>
+      
+       <div class="social-icons">
+      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i>
+ 
+  </footer>
+</body>
+</html>
